@@ -36,7 +36,7 @@ console.log(number1 % number2)
  // number1 ** number2 // 10 ** 4 - 10*10*10*10
  console.log(number1 ** number2);
 
-// Type conversion vs Type Coercion
+// --> Type conversion vs Type Coercion
  // When JS/TS convert one datatype into other implicitly is known as Type Coercion
  // When you convert it explictily - Number("4") - Type Conversion
 
@@ -91,3 +91,59 @@ console.log(10 > 30);
 console.log(10 >= 10)// 
 console.log(10 < 5); // false
 console.log(5 <= 5);
+
+
+console.log("***********************************")
+
+// 3. Logical Operators - Used to combine multiple condition to get the final result. The result should be in the form of boolean
+
+   // 1. Logical AND (&&) - Both the condition should be true to get the result as true
+   // 2. Logical OR (||) - Either of the condition has to be trur to get the result as true
+   // 3. Logical NOT (!) - It will reverse the result from true to false and vice-versa
+
+   // 1. AND (&&) - (condition) && (condition)
+
+   // true && true - true
+   // true && false - false
+   // false && true - false
+   // false && false - false
+
+   console.log("OR", (10 > 5) || (10> 9))
+   console.log("OR", (10 > 5) || (10> 90))
+   console.log("OR", (10 > 50) || (10> 9))
+   console.log("OR", (10 > 50) || (10> 90))
+
+   // 2. OR (||)
+
+   // true || true - true
+   // true || false - true
+   // false || true - true
+   // false || false - false
+
+   console.log("AND", (10 > 5) && (10> 9))
+   console.log("AND", (10 > 5) && (10> 90))
+   console.log("AND", (10 > 50) && (10> 9))
+   console.log("AND", (10 > 50) && (10> 90))
+
+
+
+// calendar - Month year -> Next - select 5th may 2027
+
+
+// 3. Logical NOT (!) = !false 
+// !true - false
+console.log(!(10 < 5));
+
+
+// 4. Assignment Operator(=) - Assigns the value to a variable
+
+let i1 = 100
+
+// i1 = i1+5 // i1 = 100+5 = 105
+
+i1 += 5 // i1 = i1+5
+console.log(i1);
+
+
+
+
