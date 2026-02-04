@@ -115,12 +115,16 @@ num2 = undefined
 // 8. void - nothing - It is used inside the function as a return type
 // When a function is not returning anything by default that function will have a datatype as void
 
-function add(): void{
-    console.log("Welcome to addition");
+function add(){
+    return ("Welcome to addition");
 }
 
-let d = "  "
+let d 
+console.log(typeof d);
+
+d = add()
 console.log(d);
+console.log(add())
 
 
 
