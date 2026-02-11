@@ -72,10 +72,33 @@ while(condition){ // j<=5
 // j <=10 , j<=1, j<0, j==0 , j>=2,  j<=1 - Cannot use
 
 let j = 10 
-while(j >=1){
+while(j <1){
     console.log(j) // 10
     j--
 }
+
+console.log("**************************");
+// Do while loop - 
+
+/*
+
+initialization
+do{
+ // block of code to be executed
+ 
+    increment/decrement
+}while(condition);
+
+*/
+
+let k = 10 
+do{
+    console.log(k) // 10
+    k--
+
+}while(k <1);
+
+
 
 
 
