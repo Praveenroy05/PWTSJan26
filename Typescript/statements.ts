@@ -22,6 +22,7 @@ if(condition){
 let age = 10
 if(age >=20){ // 10 >= 20
     console.log("Age is greater than 18")
+   // break
 }
 
 // 2. if else statement:
@@ -83,7 +84,7 @@ else{
 }
 
 
-// When can we use if else if statement and when can we use switch statement?
+// When can we use if else if statement?
   // 1. condition have ranges (>90, >80, >70) - if else if statement
   // 2. Datatypes are different - name = "string", salary - number
   // 3. Logical Operator (&&) or (||)
@@ -146,3 +147,5 @@ if(age1 >= 18){
 else{
     console.log("Not eligible for voting")
 }
+
+
