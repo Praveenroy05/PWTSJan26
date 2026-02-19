@@ -132,12 +132,61 @@ console.log(arr1.slice(0,1));
 // deleteCount - The number of elements to be deleted from startIndex
 // ele1, ele2 - The element that you want to add at the start index
 
-let arr2 = [10,20,30,40,50,60]
+let arr2 = [10,20,30,40,50,60,30]
 console.log(arr2);
 arr2.splice(2, 3, 25, 35)
 console.log("after splice method2", arr2);
 
-// 7. indexOf()
+
+let arr3 = [10,20,30,40,50,40,30]
+// 7. indexOf(element, startIndex?) - Returns the index of the first occurrence of an element in an array, or -1 if not found
+// Syntax:
+// arrayName.indexOf(element, startIndex?)
+const index = arr3.indexOf(30)
+console.log(index);
+const index1 = arr3.indexOf(30, -1)
+console.log(index1)
 
 
- 
+// Assginment -0:
+// Find out all the index of 30 available inside an array - arr3
+// 2,6
+
+
+// Assignment
+// To find out the index of first duplicate value from the array
+
+
+// 8. lastIndexOf(element, startIndex?) - Returns the index of the last occurrence of an element in an array, or -1 if not found
+// Syntax:
+// arrayName.lastIndexOf(element, startIndex?)
+const lastIndex = arr3.lastIndexOf(30)
+console.log(lastIndex);
+
+
+// 9. concat(array2, array3) - It merge 2 or more arrays and return the new array
+// Syntax:
+// arrayName.concat(arr1, arr2,....)
+
+let arr4 = [1,2,3, 'TS']
+let arr5 = ["10","JS"]
+let arr6 = arr4.concat(arr5)
+console.log(arr6);
+console.log(arr4);
+
+// 10. join(separator?) - Join all the elements of an array and return as a string
+let arr7 = ["20", "11", "2026"] // dd-mm-yyy or dd/mm/yyyy
+const joinResult = arr7.join("/")
+console.log(joinResult);
+
+// 11. toString() - Convert the array into string 
+console.log(arr7.toString());
+
+// 12. includes(element, startIndex?) - Returns true if the element is found in the array, otherwise false
+
+console.log(arr7.includes("20"))
+console.log(arr7.includes("20", 1))
+
+
+
+// string - str // string.includes(str)
