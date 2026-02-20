@@ -65,6 +65,80 @@ str.concat("hello", "JS")
 
 
 // 7. slice(startIndex?, endIndex?) - return a portion of the string
-// 8. substring()
-// 9 .
+// Syntax:
+// stringName.slice(startIndex, endIndex(exclusive))
 
+let str3 = "This is a string"
+console.log(str3.slice())
+console.log(str3.slice(1))
+console.log(str3.slice(10,5))
+
+// 8. substring(startIndex, endIndex?) - return a portion of the string
+// Syntax:
+// stringName.substring(str, end?)
+console.log(str3.substring(1))
+console.log(str3.substring(10,5))
+
+
+
+
+let str4 = "USD 1234"
+
+
+// 9 . startsWith(string, startIndex?) - It checks if the string is starting with the specified string and return us the boolean value.
+console.log(str3.startsWith("t", 11))
+console.log(str3.startsWith("This"))
+
+// 10 . endsWith(string, endIndex?) - It checks if the string is ending with the specified string and return us the boolean value.
+
+// username -    username   
+
+// 11. toUpperCase() - It converts the string to upper case letter and return a new string
+console.log(str3)
+console.log(str3.toUpperCase())
+// 12. toLowerCase() - It converts the string to lower case letter and return a new string 
+console.log(str3.toLowerCase())
+console.log(str3)
+
+// 13. trim() - It removes the leading and trailing whitespace from a string and return a new string
+
+console.log("username" == "  username  ".trim());
+
+// 14. trimStart() - It removes the leading whitespace from a string and return a new string
+
+console.log("username  " == "  username  ".trimStart());
+
+// 14. trimEnd() - It removes the trailing whitespace from a string and return a new string
+
+console.log("  user name" == "  user name  ".trimEnd());
+
+let str5 = "  This is a TS  "
+console.log(str5)
+console.log(str5.trim())
+
+
+// 15. split(separator) - Splits the string into an array of substring based on the specified separator
+// Syntax:
+// stringName.split(sep)
+
+let str6 = "Apple Banana mango Typescript JS Blue"
+console.log(str6.split(" "))
+
+
+let email = "praveen@qamitra.com"
+// Print the domain name from the email
+let domain = email.split("@")
+console.log(domain[1].split(".")[1]);
+console.log(email)
+
+
+let str7: string = "Welcome to Typsescript class";
+ 
+console.log("endsWith.." + str3.endsWith("class", 10));
+ 
+
+
+// Object - 
+// Class - POM framework
+
+// Monday - Installation and understanding of the structure PW
