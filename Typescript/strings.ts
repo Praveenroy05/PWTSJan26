@@ -135,10 +135,29 @@ console.log(email)
 let str7: string = "Welcome to Typsescript class";
  
 console.log("endsWith.." + str3.endsWith("class", 10));
- 
+
 
 
 // Object - 
 // Class - POM framework
 
 // Monday - Installation and understanding of the structure PW
+
+// Playwright - PW - Web and API both. It is also a framework
+
+// Any tool which helps us in writing the test case and assertion
+
+// test, expect - it is also framework - PW
+
+// 1. Installation
+// 2. Structure of PW framework
+
+
+// 1. Nodejs - npm - node filename.js/ts
+// 2. Editor
+// 3. Typescript
+// 4. tsx - Typescript executor 
+// 5. Playwright - Test automation tool
+
+
+// 5. Playwright - npm init playwright
