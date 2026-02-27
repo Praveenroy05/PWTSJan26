@@ -1,6 +1,5 @@
 // Data types - Which defines what type of data a variable is storing
 
-import { isLineBreak } from "typescript";
 
 // int i = 10
 // string s = "Test"
