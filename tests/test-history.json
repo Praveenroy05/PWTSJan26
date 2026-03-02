@@ -1,0 +1,28 @@
+{
+  "runs": [],
+  "tests": {
+    "[chromium] example.spec.ts::has title": [
+      {
+        "passed": true,
+        "duration": 1999,
+        "timestamp": "2026-03-02T03:43:57.819Z",
+        "skipped": false,
+        "retry": 0
+      }
+    ]
+  },
+  "summaries": [
+    {
+      "runId": "run-1772423032826",
+      "timestamp": "2026-03-02T03:43:52.826Z",
+      "total": 1,
+      "passed": 1,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "slow": 0,
+      "duration": 4993,
+      "passRate": 100
+    }
+  ]
+}

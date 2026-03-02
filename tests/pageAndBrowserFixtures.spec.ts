@@ -17,7 +17,8 @@ test("Browser fixture", async function({browser}){
     await page1.goto("https://linkedin.com")
 
 
-    
-
-
+    // Locators
+    // cssSelector
+    // xpath
+    // getByLocators
 })

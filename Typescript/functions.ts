@@ -70,8 +70,8 @@ greet()
 
 // 2. Parametrised and non-returning function
 
-function addition(a:number,b:number){
-    console.log(a+b);
+async function addition(a:number,b:number){
+    await console.log(a+b);
 }
 
 addition(30,40)
