@@ -74,8 +74,8 @@
  * 
  * #form #username
  * 
- * first() - first matching
- * last() - last matching
+ * first() - first matching 
+ * last() - last matching - 
  * nth(index) - nth(0) - nth(1)
  * 
  * 
@@ -102,12 +102,14 @@
 // 2. XPATH
 
 //  / - Absolute xpath - /html/body/div/div/section/section/h2
-// // - Relative xpath - //*[@id='login']/h2
+// // - Relative xpath - (//h2)[1]
 
 // In xpath the index will starts from 1 
 
 //tagname or *[@attribute = 'value'] - (//*[@attribute = 'value'])[2]
 
+
+// Syntax:
 1. //*[@attribute='value'] or (//*[@attribute='value'])[1]
 
 //*[@id='userEmail']
@@ -118,11 +120,12 @@
 
 AXES - xpath
 
-3. // Parent to child
+3. // Parent to child - by using /(immediate child) or //(any childern - can be descandant)
 
 //div[@class='form-group']/input[@id='userEmail'] OR 
 
 //div[@class='form-group']//input[@id='userEmail']
+//div[@class='form-group']//input[@id='password']
 
 
 4. Moving from one sibling to another sibling
@@ -156,6 +159,7 @@ AXES - xpath
 //*[contains(text(), 'negative')]
 
 
+
 // 8. From child to parent traversing
 
 // * or tagname [@attribute='value']/parent::parentTag
@@ -184,9 +188,9 @@ AXES - xpath
 
 These are the recommended built-in locators.
 
-page.getByRole() - Works on the role of an element - button, textbox, checbox, heading, link, radio, menuitem
+page.getByRole() - Works on the role of an element - button, textbox, checkbox, heading, link, radio, menuitem
 
-page.getByText() - 
+page.getByText() - Identify the element by using the text value (contains)
 page.getByLabel()
 page.getByAltText()
 page.getByTestId() - 
@@ -195,7 +199,7 @@ page.getByTitle()
 
 
 // ads 
-// adsabcd
+// ads abcd hghjf
 
 page.getByText('ads', {exact:true})
 page.getByText('Practice Form', {exact:true})
@@ -203,11 +207,13 @@ page.getByText('Practice Form', {exact:true})
 
 1. page.getByRole('radio', {name: 'Female'}) to locate by explicit and implicit accessibility attributes.
 
-// heading -h1-h6
-// <button>
-// input - textbox
+// heading - <h1-h6>
+// button - <button> or class="btn"
+// textbox - <input>
 // radio
 // checkbox
+
+page.getByRole('button', {name: 'Submit'})
 
 // Email
 // Emails
@@ -251,3 +257,5 @@ page.getByText('Practice Form', {exact:true})
 // 4.page.getByTestId() - to locate the element based on the data-testid as an attribute
 
 
+// Fill the input - validation
+// click on element

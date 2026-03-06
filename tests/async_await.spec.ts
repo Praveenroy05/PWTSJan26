@@ -9,7 +9,12 @@ test("Login",   async function({page}){
     // validate if the login is succ
     await page.goto('https://playwright.dev/');
     await page.getByRole('link', { name: 'Get started' }).click();
-    await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
+    await expect(page.getByRole('heading', { name: 'Installation' , exact:true})).toBeVisible();
+
+    await page.locator("#id")
+
+   
+    
 
    // promise - pending, success, rejected
 })
