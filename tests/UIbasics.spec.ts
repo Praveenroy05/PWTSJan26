@@ -44,17 +44,46 @@ test("Handling radio button and checkbox", async ({page})=>{
     await page.goto("https://demoqa.com/automation-practice-form")
     // click() - Click on an element
     // check() - It validates if the element is already checked/selected, if it is not selected then it click on the element. Only for checkbox or radio.
+    // uncheck() - It validates if the element is not already checked/selected, if it is selected then it click on the element. Only for checkbox or radio.
 
-    await page.locator("#gender-radio-2").click()
+    await page.locator("#gender-radio-2").check()
     // toBeChecked() - which validates of the element is checked or not
     await expect(page.locator("#gender-radio-2")).toBeChecked()
 
-    await page.locator("#hobbies-checkbox-3").click()
+    await page.locator("#hobbies-checkbox-3").check()
     await expect(page.locator("#hobbies-checkbox-3")).toBeChecked()
     
-    await page.locator("#hobbies-checkbox-3").click()
+    await page.locator("#hobbies-checkbox-3").uncheck()
+    await expect(page.locator("#hobbies-checkbox-3")).not.toBeChecked()
 
-    await page.waitForTimeout(2000)
+    // count() - Return the total number of matching element with the locator
+    let checbox = page.locator("div.form-check input[type='checkbox']")
+    let countOfChecbox  = await checbox.count()
+
+    for(let i=0; i<countOfChecbox; i++){
+        await checbox.nth(i).check()
+        await page.waitForTimeout(1000)
+    }
+
+// Note: If you want to uncheck the checkbox you can use either click() or uncheck()
+
+})
+
+// How to get the text value from an element
+
+test("Get the text from an element", async ({page})=>{
+    await page.goto("https://testautomationpractice.blogspot.com/")
+    // textContent() - return the text value from the matching element even if the element is not visible on the page
+    // innerText() - return the text value of an element
+    const text = await page.locator("h1.title").innerText()
+    console.log(text);
+
+    // Get the text value of multiple element
+
+    const allTexts = await page.locator("h2.title").allTextContents()
+    console.log(allTexts);
 
 
+    // allTextContents()
+    // allInnerTexts()
 })
