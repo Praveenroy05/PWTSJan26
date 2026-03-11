@@ -37,13 +37,24 @@ test("Login into application using valid credentials", async function({page}){
    // The page should have a "Specific" url
    // url() - To get the url of the current page
    await expect(page.url()).toContain("logged-in-successfully")
+})
 
 
+test("Handling radio button and checkbox", async ({page})=>{
+    await page.goto("https://demoqa.com/automation-practice-form")
+    // click() - Click on an element
+    // check() - It validates if the element is already checked/selected, if it is not selected then it click on the element. Only for checkbox or radio.
 
+    await page.locator("#gender-radio-2").click()
+    // toBeChecked() - which validates of the element is checked or not
+    await expect(page.locator("#gender-radio-2")).toBeChecked()
 
+    await page.locator("#hobbies-checkbox-3").click()
+    await expect(page.locator("#hobbies-checkbox-3")).toBeChecked()
+    
+    await page.locator("#hobbies-checkbox-3").click()
 
-
-
+    await page.waitForTimeout(2000)
 
 
 })
