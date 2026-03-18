@@ -32,7 +32,7 @@ test("Handling mouse hover for an element", async ({page})=>{
 test("handling scroll on the page", async ({page})=>{
     await page.goto("https://testautomationpractice.blogspot.com/")
     // scrollIntoViewIfNeeded()
-    await page.getByText("Download Files", {exact: true}).scrollIntoViewIfNeeded()
+    // await page.getByText("Download Files", {exact: true}).scrollIntoViewIfNeeded()
     await page.getByText("Download Files", {exact: true}).click()
     await page.locator("#input1").fill("Testing")
     await page.locator("#inputText").fill("Scroll Up")
