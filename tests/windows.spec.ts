@@ -12,15 +12,54 @@
 import {test, expect} from '@playwright/test'
 
 test("Multiple tabs or windows handling", async ({page})=>{
+
     await page.goto("https://demo.automationtesting.in/Windows.html")
 
-    const page1 = page.waitForEvent("popup")
+     const page1 = page.waitForEvent("popup")
 
-    // Click on the button which is responsible for generation of "popup" event
-    await page.locator("#Tabbed button").click()
+    // // Click on the button which is responsible for generation of "popup" event
+     await page.locator("#Tabbed button").click()
 
-    // Waiting for the final result of waitForEvent("popup")
-    const newPage = await page1
+    // // Waiting for the final result of waitForEvent("popup")
+     const newPage = await page1
+
+    // Perform any action on the new tab/window
+    await newPage.getByText("Downloads", {exact: true}).click()
+    await expect(newPage.locator("h2#bindings")).toContainText("WebDriver Language Bindings")
+
+    await page.bringToFront()
+    await page.waitForTimeout(2000)
+
+    // Come back  to the main/original page and perform any action
+
+    await page.getByText("Home", {exact: true}).click()
+    await expect(page.getByPlaceholder("Email id for Sign Up")).toBeVisible()
+
+    //  page.reload()
+    //  page.goBack()
+    //  page.goForward()
+
+})
+
+
+test("Multiple tabs or windows handling using browser fixture", async ({browser})=>{
+    const context = await browser.newContext()
+    const page = await context.newPage()
+
+    await page.goto("https://demo.automationtesting.in/Windows.html")
+
+    const [newPage] = await Promise.all([
+        page.waitForEvent("popup"),
+        page.locator("#Tabbed button").click()
+    ])
+
+    // const page1 = page.waitForEvent("popup")
+
+    // // Click on the button which is responsible for generation of "popup" event
+    // await page.locator("#Tabbed button").click()
+
+    // // Waiting for the final result of waitForEvent("popup")
+    // const newPage = await page1
 
     // Perform any action on the new tab/window
     await newPage.getByText("Downloads", {exact: true}).click()
