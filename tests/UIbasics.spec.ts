@@ -80,6 +80,7 @@ test("Get the text from an element", async ({page})=>{
 
     // Get the text value of multiple element
 
+    await page.locator("h2.title").first().waitFor()
     const allTexts = await page.locator("h2.title").allTextContents()
     console.log(allTexts);
 

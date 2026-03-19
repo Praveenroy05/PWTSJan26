@@ -52,7 +52,7 @@ test("handling drag and drop", async ({page})=>{
 
    await sourceElement.hover()
    await page.mouse.down()
-   await targetElement.hover()
+   await targetElement.hover()      
    await page.mouse.up()
    await expect(page.locator("div#droppable p")).toHaveText("Dropped!")
 })
