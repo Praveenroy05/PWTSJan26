@@ -23,6 +23,12 @@ import {test,expect} from '@playwright/test'
 
 test("handling frames", async ({page})=>{
     await page.goto("https://demo.automationtesting.in/Frames.html")
-    await page.locator("div.col-xs-6 input").first().fill("Testing")
-    await expect(page.locator("div.col-xs-6 input").first()).toHaveValue("Testing")
+    // frameLocator() - Which helps us in entering inside the iframe to select the elements
+    const framePage = await page.frameLocator("#Single iframe")
+
+    await framePage.locator("div.col-xs-6 input").first().fill("Testing")
+    await expect(framePage.locator("div.col-xs-6 input").first()).toHaveValue("Testing")
+
+    await page.getByText("Home", {exact: true}).click()
+    await expect(page.getByPlaceholder("Email id for Sign Up")).toBeVisible()
 })
