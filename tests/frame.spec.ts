@@ -1,15 +1,33 @@
-import {test, expect} from '@playwright/test';
+// Frames - 
 
-test("Handling Frames", async ({page})=>{
+/*
+
+helping us in integrating one html page to another page. Identify the iframe by using a 
+
+<html> - page
+
+    <iframe> - const framePage = page.frameLocator()
+        <html>
+           <iframe> - const frame1 = framePage.frameLocator()
+              <html></html>
+            </iframe>
+        </html>
+    </iframe>
+
+.......
+</html>
+
+*/
+
+import {test,expect} from '@playwright/test'
+
+test("handling frames", async ({page})=>{
     await page.goto("https://demo.automationtesting.in/Frames.html")
+    // frameLocator() - Which helps us in entering inside the iframe to select the elements
+    const framePage = await page.frameLocator("#Single iframe")
 
-    // frameLocator("selector") - returns FrameLocator object which helps us to enter into the frame and perform the actions on the elements inside the frame.
-    const framePage = page.frameLocator("#singleframe")
-   // page.locator('iframe[name="SingleFrame"]').contentFrame()
-
-
-    await framePage.locator("[type='text']").first().fill("Single frame")
-    await expect(framePage.locator("[type='text']").first()).toHaveValue("Single frame")
+    await framePage.locator("div.col-xs-6 input").first().fill("Testing")
+    await expect(framePage.locator("div.col-xs-6 input").first()).toHaveValue("Testing")
 
     await page.getByText("Iframe with in an Iframe").click()
 
