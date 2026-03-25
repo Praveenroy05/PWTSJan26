@@ -25,5 +25,9 @@
 // 3. Create a new branch from the master for your test automation work - git checkout -b <branchname> - git checkout -b LoginPage 
 // 4. Make the changes in the code and save the file
 // 5. git status - validate all the files that you have changed
-// 5. git add . - Add all the files in your local git
+// 6. git add . - Add all the files in your local git
+// 7. git commit -m "added login page"
+    // 7.1 - Switch to the master branch - git checkout master
+    
+
 
