@@ -31,7 +31,19 @@
     // 7.2 - Pull all the latest changes from remot master branc to local master - git pull origin master
     // 7.3 - Switched back to your feature - git checkout LoginPage
     // 7.4 - Merge master branch to LoginPage branch - git merge master
-    
+    // 8. Push the change to the remote branch - git push origin LoginPage
+// 9. Go to Github/Bitbucket/Gitlab and create a pull request (PR) to merge your changes from LoginPage branch to master branch. The member will review your code and  approve the PR, you can then merge the PR to master.
+
+
+// #3 - #9
+
+// git status - 
+// git branch - 
+// git checkout -b branchName - create a new branch
+// git checkout branchName - switch to a branch
+// git add .
+// git commit -m "message"
+// git push
     
 
 
