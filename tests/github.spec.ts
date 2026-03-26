@@ -29,7 +29,9 @@
 // 7. git commit -m "added login page"
     // 7.1 - Switch to the master branch - git checkout master
     // 7.2 - Pull all the latest changes from remot master branc to local master - git pull origin master
-    // 7.3 - Switch back to your feature - git checkout LoginPage
+    // 7.3 - Switched back to your feature - git checkout LoginPage
+    // 7.4 - Merge master branch to LoginPage branch - git merge master
+    
     
 
 
