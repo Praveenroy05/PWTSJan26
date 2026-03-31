@@ -8,7 +8,7 @@
 import { test, expect } from '@playwright/test';
 import path from 'path';
 
-test("File Uploads handling", async ({page})=>{
+test("File Uploads handling", async function({page}){
     await page.goto("https://davidwalsh.name/demo/multiple-file-upload.php")
 
     console.log(__dirname) // C:\Users\prave\Downloads\PWTSJan26\tests
