@@ -9,6 +9,7 @@
 // download - file download
 
 import {test, expect} from '@playwright/test'
+import {Employee} from '../Typescript/Employees1'
 
 test("Handling alerts", async ({page})=>{
     await page.goto("https://demoqa.com/alerts")
@@ -39,3 +40,14 @@ test("Handling alerts", async ({page})=>{
 })
 
 // Multiple windows/child windows
+
+const emp = new Employee(101,"Rahul", 25, 100000, 20000)
+console.log(emp.empid)
+console.log(emp.empName)
+console.log(emp.offer)
+console.log(emp.empSalary)
+emp.employeeInformation()
+Employee.displayCompanyName()
+
+emp.offer = 50000
+console.log(emp.offer)
