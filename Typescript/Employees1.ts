@@ -69,7 +69,7 @@ export class Employees1{
     static companyName = "ABC"
 
     constructor(id:number, name:string, age: number, salary:number, offer:number){
-        this.empid = id // emp.empid = id
+       // this.empid = id // emp.empid = id
         this.empName = name // emp.empName = name
         this.empAge = age // emp.empAge = age
         this.empSalary = salary
@@ -87,7 +87,7 @@ export class Employees1{
 
 }
 
-const emp = new Employees1(101,"Rahul", 25, 100000, 20000)
+const emp = new Employees1(101, "Rahul", 25, 100000, 20000)
 console.log(emp.empid)
 console.log(emp.empName)
 console.log(emp.offer)
