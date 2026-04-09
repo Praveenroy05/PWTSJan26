@@ -54,6 +54,13 @@ test("E2E Automation scenario", async ({page})=>{
 
     await page.getByText("Place Order").click()
     await expect(page.locator("h1.hero-primary")).toContainText("Thankyou")
+<<<<<<< HEAD:tests/E2EAutomation.spec.ts
+=======
+
+    const orderText = await page.locator(".em-spacer-1 label.ng-star-inserted").textContent()
+
+    console.log(orderText);
+>>>>>>> c0c622164d7ff7ec87d4451684246d849070adaa:testing/E2EAutomation.spec.ts
 
     const orderText = await page.locator(".em-spacer-1 .ng-star-inserted").textContent()
 
