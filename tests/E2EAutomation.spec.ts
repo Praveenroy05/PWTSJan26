@@ -1,4 +1,4 @@
-let productName = "ZARA COAT 3"
+let productName = "iphone 13 pro"
 let email = "testnHNk@gmail.com"
 let country = " Singapore"
 
@@ -52,6 +52,44 @@ test("E2E Automation scenario", async ({page})=>{
 
     await ddResult.filter({hasText:`${country}`}).click()
 
-    await page.waitForTimeout(3000)
+    await page.getByText("Place Order").click()
+    await expect(page.locator("h1.hero-primary")).toContainText("Thankyou")
 
+    const orderText = await page.locator(".em-spacer-1 .ng-star-inserted").textContent()
+
+    //console.log(orderText); | 69cfe9c1f86ba51a65446b06 | 
+    const orderID = orderText?.replaceAll("|","").trim()
+    console.log(orderID);
+
+    await page.locator("[routerlink='/dashboard/myorders']").first().click()
+
+
+    // Table - Combination of rows and columns
+
+    // <table> - development of a table element
+        // thead - Table Heading
+        // tbody - Table body - Which will consists of all the data inside the table
+            // tr - Table row
+                //td - Table definition - Table column
+
+    await expect(page.locator("table tbody")).toBeVisible()
+
+    const rows = page.locator("table tbody tr")
+
+    await rows.filter({hasText:`${orderID}`}).locator("button").first().click()
+
+   // const rowsCount = await rows.count()
+
+    // for(let i=0; i<rowsCount; i++){
+    //     const orderText = await rows.nth(i).locator("th").innerText()
+    //     if(orderText === orderID){
+    //         await rows.nth(i).locator("button").first().click()
+    //         break
+    //     }
+    //        
+    // }
+
+    await expect(page.locator("div.col-text")).toHaveText(orderID!)
+
+    
 })
