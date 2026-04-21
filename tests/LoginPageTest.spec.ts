@@ -8,8 +8,9 @@ let email = "testnHNk@gmail.com"
 let password = "Testing@1234"
 let incorrectPwd = "Test"
 
+let lp :LoginPage
 test.beforeEach(async ({page})=>{
-    const lp = new LoginPage(page)
+    lp = new LoginPage(page)
     await lp.launchURL(url)
 })
 
