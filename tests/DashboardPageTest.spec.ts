@@ -29,3 +29,8 @@ test("@regression Validate the product details on the view page", async ()=>{
    await expect(dp.viewPageProductName).toHaveText(productName)
 })
 
+
+// json
+// excel
+
+// {key : value}
