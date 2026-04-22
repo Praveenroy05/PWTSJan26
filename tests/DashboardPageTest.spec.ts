@@ -33,6 +33,4 @@ test("@regression Validate the product details on the view page", async ()=>{
 // json
 // excel
 
-
 // {key : value}
-
