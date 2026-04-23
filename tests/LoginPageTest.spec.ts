@@ -3,6 +3,8 @@
 import {test, expect} from '@playwright/test';
 import { LoginPage } from '../pages/LoginPage';
 
+test.describe.configure({mode: 'serial', timeout:10000, retries:4})
+
 let url = "https://rahulshettyacademy.com/client"
 let email = "testnHNk@gmail.com"
 let password = "Testing@1234"

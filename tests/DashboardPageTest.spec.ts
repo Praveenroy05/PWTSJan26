@@ -19,14 +19,20 @@ test.beforeEach(async ({page})=>{
     await expect(lp.homePageIdentifier).toBeVisible()
 })
 
-test("@smoke @regression Add the product to the cart", async ()=>{
-    await dp.searchProduct(productName,1)
-    await expect(dp.addToCartSuccMsg).toHaveText("Product Added To Cart")
-})
+test.describe("Dashboard Page Test", async ()=>{
+    test("@smoke @regression Add the product to the cart", async ()=>{
+        await test.step("Search and add the product to the cart", async ()=>{
+            await dp.searchProduct(productName,1)
+        })
+        await test.step("Validate if the product is added to the cart", async ()=>{
+            await expect(dp.addToCartSuccMsg).toHaveText("Product Added To Cart")
+        })
+    })
 
-test("@regression Validate the product details on the view page", async ()=>{
-   await dp.searchProduct(productName, 0)
-   await expect(dp.viewPageProductName).toHaveText(productName)
+    test("@regression Validate the product details on the view page", async ()=>{
+    await dp.searchProduct(productName, 0)
+    await expect(dp.viewPageProductName).toHaveText(productName)
+    })
 })
 
 

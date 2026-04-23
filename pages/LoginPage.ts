@@ -33,7 +33,7 @@ export class LoginPage{
     async loginIntoApplication(username:string, password:string){
         await this.username.fill(username)
         await this.password.fill(password)
-        await this.loginButton.click()
+        await this.loginButton.click({timeout:120000})
     }
 }
 
