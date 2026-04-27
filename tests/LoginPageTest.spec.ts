@@ -16,7 +16,7 @@ test.beforeEach(async ({page})=>{
     await lp.launchURL(url)
 })
 
-test.skip("Valid login test",{tag: ['@smoke', '@regression']}, async ()=>{
+test("Valid login test",{tag: ['@smoke', '@regression']}, async ()=>{
     await lp.loginIntoApplication(email, password)
     await expect(lp.homePageIdentifier).toBeVisible()
 })
