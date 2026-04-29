@@ -27,3 +27,16 @@ test("Invalid login test",{tag: '@regression'}, async ()=>{
 })
 
 // Hooks in Playwright
+
+
+console.log("Test")
+
+// AI - MCP - Model Context Protocol
+// Playwright Agent
+
+// AI - Artificial Intellegence 
+// LLM - Large Language Model
+
+// Prompt Engineering - 3 Cs - Context, constraint, Clarity
+
+// Token - every 4 chars = 1 Token - Question/Response - 
