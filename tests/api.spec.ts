@@ -73,3 +73,6 @@ test("API testing for login", async ({request})=>{
     console.log(orderID);
     
 })
+
+
+// .env.qa.stg.prod

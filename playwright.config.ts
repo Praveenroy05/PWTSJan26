@@ -4,9 +4,21 @@ import { defineConfig, devices } from '@playwright/test';
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
  */
-// import dotenv from 'dotenv';
-// import path from 'path';
-// dotenv.config({ path: path.resolve(__dirname, '.env') });
+import dotenv from 'dotenv';
+import path from 'path';
+
+// dotenv - is a library which helps us in loading the data from .env file
+// process.env - is a global object which will read the data from .env file
+
+const ENV_NAME = process.env.ENV || 'qa'
+
+// process.env = {ENV : 'prod'}
+// process.env.ENV = "prod"
+
+
+dotenv.config({ path: path.resolve(__dirname,'testdata', `${ENV_NAME}.env`) });
+
+// console.log(process.env.BASE_URL)
 
 /*
 
@@ -54,7 +66,7 @@ export default defineConfig({
     trace: 'on',
     screenshot : 'on',
     video :'on',
-    headless : true,
+    headless : false,
     // viewport : {height: 100, width:100}
   },
 

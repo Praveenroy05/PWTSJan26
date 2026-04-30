@@ -6,7 +6,10 @@
   "scripts": {
     "LPTest": "npx playwright test tests/LoginPageTest.spec.ts",
     "fullTest": "npx playwright test",
-    "smokeTest": "npx playwright test -g @smoke"
+    "smokeTest": "npx playwright test -g @smoke",
+    "test:qa": "set ENV=qa&& npx playwright test tests/LoginPageTestUsingEnv.spec.ts",
+    "test:prod": "set ENV=prod&& npx playwright test tests/LoginPageTestUsingEnv.spec.ts"
+
   },
   "keywords": [],
   "author": "",
@@ -17,6 +20,7 @@
     "@types/node": "^25.3.0",
     "allure-commandline": "^2.38.1",
     "allure-playwright": "^3.7.1",
+    "dotenv": "^17.4.2",
     "monocart-reporter": "^2.10.1",
     "xlsx": "^0.18.5"
   }
